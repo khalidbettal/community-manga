@@ -35,44 +35,44 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
       :class="openMenu ? 'block' : 'hidden'">
       <ul class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 lg:md:-x-8">
         <li class="text-lg md:text-base lg:text-lg font-medium group ">
-          <a href="/">Home
+
+
+          <a href="/" class="font-bold">Home
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
           </div>
         </li>
         <li class="text-lg md:text-base lg:text-lg font-medium group">
-          <a href="posts">Posts
+
+          <a href="posts" class="font-bold">Posts
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
           </div>
         </li>
         <li class="text-lg md:text-base lg:text-lg font-medium group">
-          <a href="#">Clinic
+          <a href="#" class="font-bold">Clinic
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
           </div>
         </li>
         <li class="text-lg md:text-base lg:text-lg font-medium group">
-          <a href="#">Event
+          <a href="#" class="font-bold">Event
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
           </div>
         </li>
-        <li class="text-lg md:text-base lg:text-lg font-medium group">
-          <a href="#">Blog
-          </a>
-          <div
-            class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
-          </div>
-        </li>
+        @auth
+      @include('partials.mobile-profile')
+      @endauth
       </ul>
     </div>
 
-    <button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-yellow-500 whitespace-nowrap hover:bg-yellow-600 hover:text-white
+
+<button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-yellow-500 whitespace-nowrap hover:bg-yellow-600 hover:text-white
     rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-500 focus:outline-none"
     @click="toggleSearch()">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -82,9 +82,24 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
       </svg>
     </button>
 
+    @auth
+    @include('partials.laptop-profile')
+
+    @else
+    <button type="button"
+    class="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium
+    rounded-lg text-sm px-2 md:px-6 py-2 text-center mr-3 md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"><a href="/login">Sing In</a></button>
+    @endauth
+
+
+
+<!-- component -->
+
+
+
   </nav>
 
-    @livewire('search')
+
 
 </navbar>
 

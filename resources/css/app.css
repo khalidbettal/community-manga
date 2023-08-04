@@ -1,11 +1,19 @@
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* for navbar font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css";
 
   body {
     font-family: 'Poppins', sans-serif;
   }
 
+.dark .ps__rail-y,
+.dark .ps__rail-x {
+    background-color: transparent !important;
+}

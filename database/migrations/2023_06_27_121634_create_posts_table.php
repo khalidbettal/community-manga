@@ -15,13 +15,11 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('city_id')->constrained('cities')->onDelete('cascade');
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->string('title', 100);
             $table->longText('description', 255);
             $table->string('image')->nullable();
             $table->string('slug', 100)->unique();
-            $table->dateTime('published_at');
             $table->timestamps();
         });
     }

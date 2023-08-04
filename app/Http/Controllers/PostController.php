@@ -12,10 +12,12 @@ class PostController extends Controller
 
     public function index()
     {
-      $posts = User::find(2)->comments;
-      foreach ($posts as $post) {
-        echo $post->content;
-      }
+
+        $postsWithTags = Post::all();
+
+// Extract tags from the collection of posts
+       $allTags = $postsWithTags->pluck('tags')->flatten()->unique();
+       dd($allTags);
 
 
     }

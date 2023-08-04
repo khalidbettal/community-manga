@@ -19,10 +19,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             CategorySeeder::class,
-            CitySeeder::class,
+            GenreSeeder::class,
             TagSeeder::class,
             PostSeeder::class,
             PostTagSeeder::class,
+            PostGenreSeeder::class,
             CommentSeeder::class,
             ReplySeeder::class,
 

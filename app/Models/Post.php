@@ -14,6 +14,10 @@ class Post extends Model
     {
         return $this->belongsToMany(Tag::class, 'post__tags');
     }
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class, 'post_genres');
+    }
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -22,10 +26,7 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
-    public function city()
-    {
-        return $this->belongsTo(City::class, 'city_id');
-    }
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id');

@@ -37,18 +37,16 @@ class PostResource extends Resource
                     Forms\Components\Grid::make()
                     ->schema([
 
-                        Forms\Components\Select::make('city_id')
-                        ->options(
-                             \App\Models\City::all()->pluck('cityName', 'id')
-                        )
-                        ->required()
-                        ->label('City'),
                         Forms\Components\Select::make('category_id')
                         ->options(
                             \App\Models\Category::all()->pluck('categoryName', 'id')
                         )
                         ->required()
                         ->label('Category'),
+                        Forms\Components\Select::make('genres')
+                        ->multiple()
+                        ->relationship('genres', 'genreName'),
+
 
 
 
@@ -67,7 +65,6 @@ class PostResource extends Resource
                     Forms\Components\TextInput::make('slug')
                         ->required()
                         ->maxLength(100),
-                    Forms\Components\DateTimePicker::make('published_at'),
 
                     ])->columns(2),
                     Forms\Components\Textarea::make('description')
@@ -86,8 +83,7 @@ class PostResource extends Resource
                 // Tables\Columns\TextColumn::make('description')
                 // ->limit(50),
 
-                // Tables\Columns\TextColumn::make('published_at')
-                //     ->dateTime(),
+                
 
             ])
             ->filters([
