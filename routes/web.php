@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\PostList;
+use App\Http\Livewire\SinglePost;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ use App\Http\Livewire\PostList;
 */
 Route::get('/',Home::class)->name('home');
 Route::get('/posts', PostList::class)->name('posts');
+Route::get('/single-post', SinglePost::class)->name('post.single');
 Route::get('/dashboard', Dashboard::class)->middleware(['auth', 'verified'])->name('dashboard');
 
 

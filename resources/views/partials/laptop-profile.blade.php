@@ -1,12 +1,12 @@
-<div x-data="{ open: false }" class=" dark:bg-gray-800  max-sm:hidden  flex justify-center items-center"
+<div x-data="{ open: false }" class="   max-sm:hidden  flex justify-center items-center"
   @mousedown.outside="open = false">
       <div @click="open = !open" class="relative border-b-4 border-transparent py-3" :class="{'border-indigo-700 transform transition duration-300 ': open}" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100">
         <div class="flex justify-center items-center space-x-3 cursor-pointer">
           <div class="w-12 h-12 rounded-full overflow-hidden border-2 dark:border-white border-gray-900">
             <img src="https://images.unsplash.com/photo-1610397095767-84a5b4736cbd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" class="w-full h-full object-cover">
           </div>
-          <div class="font-semibold dark:text-white text-gray-900 text-lg">
-            <div class="cursor-pointer max-lg:hidden hover:text-red-600">{{ auth()->user()->name }}</div>
+          <div class="font-semibold  text-gray-900 text-lg">
+            <div class="cursor-pointer max-lg:hidden md:dark:text-white hover:text-red-600 dark:hover:text-red-600">{{ auth()->user()->name }}</div>
           </div>
         </div>
 

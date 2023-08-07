@@ -22,6 +22,7 @@
     "dependencies": {
         "alpine-turbo-drive-adapter": "^2.0.0",
         "alpinejs": "^3.12.3",
+        "flowbite": "^1.8.1",
         "turbolinks": "^5.2.0"
     }
 }

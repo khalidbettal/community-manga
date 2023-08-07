@@ -1,17 +1,7 @@
-<x-slot name="header">
-        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <h2 class="text-xl font-semibold leading-tight">
-                {{ __('Dashboard') }}
-            </h2>
-            <x-button target="_blank" href="https://github.com/kamona-wd/kui-laravel-breeze" variant="black"
-                class="justify-center max-w-xs gap-2">
-                <x-icons.github class="w-6 h-6" aria-hidden="true" />
-                <span>Star on Github</span>
-            </x-button>
-        </div>
-    </x-slot>
 
-<div class="flex justify-center sm:mt-10 sm:gap-10 md:mt-40 flex-wrap">
+<div >
+
+<div class="flex justify-center sm:mt-10 sm:gap-10 md:mt-40 flex-wrap ">
 
 
 <div class="flex flex-col justify-center bg-slate-100  max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100">
@@ -54,9 +44,9 @@
 
 
 
-  <div class="mb-10 w-full max-w-full flex-shrink px-8 sm:w-1/2 lg:w-1/4">
-    <div class="h-full rounded-xl bg-white shadow-2xl">
-      <div x-data="{ tooltips: false }" class="relative px-6 pt-6 text-sm font-semibold">
+  <div class="mb-10 w-full max-w-full flex-shrink px-8 sm:w-1/2 lg:w-1/4 ">
+    <div class="h-full rounded-xl bg-white shadow-2xl dark:bg-cyan-800">
+      <div x-data="{ tooltips: false }" class="relative px-6 pt-6 text-sm font-semibold dark:text-white">
         All Posts
 
       </div>
@@ -69,8 +59,8 @@
         </div>
 
       </div>
-      <div class="px-6 pb-6">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
+      <div class="px-7 pb-6">
+      <button class="bg-blue-500  hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">
      <a href="/posts">Explore</a>
 </button>
         </div>
@@ -79,8 +69,8 @@
 
   </div>
   <div class="mb-10 w-full max-w-full flex-shrink px-8 sm:w-1/2 lg:w-1/4">
-    <div class="h-full rounded-xl bg-white shadow-2xl">
-      <div x-data="{ tooltips: false }" class="relative px-6 pt-6 text-sm font-semibold">
+    <div class="h-full rounded-xl bg-white shadow-2xl dark:bg-cyan-800">
+      <div x-data="{ tooltips: false }" class="relative px-6 pt-6 text-sm font-semibold dark:text-white">
         My posts
 
       </div>
@@ -95,14 +85,14 @@
       </div>
       <div class="px-8 pb-6">
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded " wire:click="loadMyPosts">
-     My posts
+     show
 </button>
       </div>
     </div>
   </div>
   <div class="mb-10 w-full max-w-full flex-shrink px-8 sm:w-1/2 lg:w-1/4">
-    <div class="h-full rounded-xl bg-white shadow-2xl">
-      <div x-data="{ tooltips: false }" class="relative px-6 pt-6 text-sm font-semibold">
+    <div class="h-full rounded-xl bg-white shadow-2xl dark:bg-cyan-800">
+      <div x-data="{ tooltips: false }" class="relative px-6 pt-6 text-sm font-semibold dark:text-white">
         Add Post
 
       </div>
@@ -130,8 +120,9 @@
     </div>
   </div>
   <div class="mb-10 w-full max-w-full flex-shrink px-8 sm:w-1/2 lg:w-1/4 ">
-    <div class="h-full rounded-xl bg-white shadow-2xl">
-      <div x-data="{ tooltips: false }" class="relative px-6 pt-6 text-sm font-semibold">Settings <span class="mt-1 h-2 w-2 animate-pulse rounded-full bg-green-500 ltr:float-right rtl:float-left"></span></div>
+    <div class="h-full rounded-xl bg-white shadow-2xl dark:bg-cyan-800">
+      <div x-data="{ tooltips: false }" class="relative px-6 pt-6 text-sm font-semibold dark:text-white">
+        Settings <span class="mt-1 h-2 w-2 animate-pulse rounded-full bg-green-500 ltr:float-right rtl:float-left"></span></div>
       <div class="flex flex-row justify-center px-6 py-4">
         <div class="relative h-14 w-14 self-center rounded-full bg-indigo-500 text-center text-indigo-50">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="bi bi-person absolute left-1/2 top-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform">
@@ -160,3 +151,4 @@ class="bg-blue-500  rounded py-1 px-4 text-base font-semibold text-white "
 </div>
 
 </div>
+
