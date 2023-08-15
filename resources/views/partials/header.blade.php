@@ -9,21 +9,21 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
     <button
       class="sidebar-open block md:hidden relative z-30 focus:outline-none transform  -translate-x-1/2 -translate-y-1/2 active:scale-75 transition-transform mt-5"
       @click="toggleMenu()">
-      <svg xmlns="http://www.w3.org/2000/svg" class="btn-open h-5 w-5 transform transition duration-500 ease-in-out"
+      <svg xmlns="http://www.w3.org/2000/svg" class="btn-open h-5 w-5 transform transition duration-500 ease-in-out dark:text-white"
       :class="openMenu ? 'hidden' : 'block'"
         viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
           d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
           clip-rule="evenodd" />
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg"
-        class="btn-close h-5 w-5 transform transition duration-500 ease-in-out" viewBox="0 0 20 20"
-        :class="openMenu ? 'block' : 'hidden'"
-        fill="currentColor">
-        <path fill-rule="evenodd"
-          d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-          clip-rule="evenodd" />
-      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+      viewBox="0 0 20 20" stroke-width="1.5" stroke="currentColor"
+      class="btn-close h-5 w-5 transform transition font-bold duration-500 ease-in-out"
+      :class="openMenu ? 'block' : 'hidden'">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
     </button>
 
     <a href="#" class="text-3xl md:text-4xl font-bold  tracking-wide dark:text-white">
@@ -46,7 +46,7 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
         </li>
         <li class="text-lg md:text-base lg:text-lg font-medium group">
 
-          <a href="posts" class="font-bold md:dark:text-white hover:text-red-600">Posts
+          <a href="{{ route('posts') }}" class="font-bold md:dark:text-white hover:text-red-600">Posts
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
@@ -71,7 +71,7 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
       @else
       <button type="button"
     class="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium sm:hidden
-    rounded-lg text-sm px-6 py-2 text-center  md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"><a href="/login">Sing In</a></button>
+    rounded-lg text-sm px-6 py-2 text-center  md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"><a href="{{ route('login') }}">Sing In</a></button>
       @endauth
       </ul>
     </div>
@@ -93,7 +93,7 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
     @else
     <button type="button"
     class="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium max-sm:hidden
-    rounded-lg text-sm px-2 md:px-6 py-2 text-center mr-3 md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"><a href="/login">Sing In</a></button>
+    rounded-lg text-sm px-2 md:px-6 py-2 text-center mr-3 md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"><a href="{{ route('login') }}">Sing In</a></button>
     @endauth
 
 

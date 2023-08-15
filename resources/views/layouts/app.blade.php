@@ -22,7 +22,7 @@
 </script>
 </head>
 
-<body class="dark:bg-gray-600">
+<body class="dark:bg-gray-800">
 
 <header class="bg-orange-50 dark:bg-purple-800 sticky top-0 z-50 ">
     @include('partials.header')

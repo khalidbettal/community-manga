@@ -12,12 +12,12 @@ class Dashboard extends Component
     public function loadMyPosts()
     {
 
-
         $posts = Auth::user()->posts()->paginate(10);
         return redirect()->route('posts')->with('myPostsLoaded', $posts);
     }
     public function render()
     {
+        
         return view('livewire.dashboard');
     }
 }

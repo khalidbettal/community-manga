@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Livewire\Comments;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\PostList;
@@ -19,8 +20,9 @@ use App\Http\Livewire\SinglePost;
 */
 Route::get('/',Home::class)->name('home');
 Route::get('/posts', PostList::class)->name('posts');
-Route::get('/single-post', SinglePost::class)->name('post.single');
+Route::get('/single-post/{slug}', SinglePost::class)->name('post.single');
 Route::get('/dashboard', Dashboard::class)->middleware(['auth', 'verified'])->name('dashboard');
+
 
 
 

@@ -1,8 +1,10 @@
-<div x-data="{ open: false }" class="   sm:hidden  flex justify-center items-center pr-4"
+
+<div x-data="{ open: false }" class="   sm:hidden  flex justify-center items-center pr-1 "
   @mousedown.outside="open = false">
-      <div @click="open = !open" class="relative border-b-4 border-transparent py-3" :class="{'border-indigo-700 transform transition duration-300 ': open}" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100">
-        <div class="flex justify-center items-center space-x-3 cursor-pointer">
-          <div class="w-12 h-12 rounded-full overflow-hidden border-2 dark:border-white border-gray-900">
+
+      <div @click="open = !open" class="relative border-b-4 border-transparent px-2 " :class="{'border-indigo-700 transform transition duration-300 ': open}" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100">
+        <div class="flex justify-center  space-x-3 cursor-pointer">
+          <div class="w-8 h-8 rounded-full overflow-hidden border-2 dark:border-white border-gray-900 ">
             <img src="https://images.unsplash.com/photo-1610397095767-84a5b4736cbd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" class="w-full h-full object-cover">
           </div>
           <div class="font-semibold  text-gray-900 text-lg">
@@ -10,7 +12,7 @@
           </div>
         </div>
 
-        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute  w-full px-5 py-3 dark:bg-gray-800 bg-white rounded-lg shadow border dark:border-transparent mt-5">
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute  w-full px-5 py-3 dark:bg-gray-800 bg-white rounded-lg shadow border dark:border-transparent mt-5 ">
           <ul class=" space-y-3 dark:text-white">
             <li class="font-medium">
               <a href="/dashboard" class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">

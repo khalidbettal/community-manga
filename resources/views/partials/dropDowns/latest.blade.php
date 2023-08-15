@@ -10,7 +10,7 @@
   >
     <button
       @click="dropdownOpen = !dropdownOpen"
-      class="bg-emerald-500 flex items-center rounded py-3 px-5 text-base font-semibold text-white"
+      class="bg-emerald-500 flex items-center rounded py-3 px-5 text-base font-semibold text-white max-sm:text-xs"
     >
       Latest
       <span class="pl-2">
