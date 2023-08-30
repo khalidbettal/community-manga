@@ -1,6 +1,6 @@
 
 
-    <section class="flex justify-around gap-10 max-sm:32 px-24 py-10 bg-gray-100 lg:py-24 font-poppins  dark:bg-gray-600">
+ <section class="flex justify-around gap-10 max-sm:32 px-24 py-10 bg-gray-300 lg:py-24 font-poppins  dark:bg-gray-600">
 
 
 
@@ -9,15 +9,15 @@
     <!-- Left section for categories and cities -->
     <div class="sticky z-40 top-24 mt-40">
         <!-- Template for types -->
-        <div class="flex flex-col py-4 xl:py-8 bg-white dark:bg-gray-900">
-            <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">Genres</h2>
+        <div class="flex flex-col py-4 xl:py-8  bg-gray-900 ">
+            <h2 class="text-lg font-semibold text-gray-200 mb-2">Genres</h2>
             <div>
-                <a href="#" class="inline-flex items-center px-2.5 py-0.5 mr-2 text-xs text-gray-700 bg-gray-200 rounded hover:bg-blue-600 dark:bg-gray-700 dark:text-gray-400 hover:text-gray-100 dark:hover:bg-gray-800">
+                <a href="#" class="inline-flex items-center px-2.5 py-0.5 mr-2 text-xs  bg-gray-700 rounded hover:bg-blue-600  text-gray-400  hover:text-gray-100 dark:hover:bg-gray-800">
                     <input type="radio" name="type" class="hidden" value="" checked>
                     <span class="ml-2">All Types</span>
                 </a>
                 @foreach ($genres as $genre)
-                    <a href="#" class="inline-flex items-center px-2.5 py-0.5 mr-2 xl:m-1 text-xs text-gray-700 bg-gray-200 rounded hover:bg-blue-600 dark:bg-gray-700 dark:text-gray-400 hover:text-gray-100 dark:hover:bg-gray-800">
+                    <a href="#" class="inline-flex items-center px-2.5 py-0.5 mr-2 xl:m-1 text-xs   rounded hover:bg-blue-600 bg-gray-700 text-gray-400 hover:text-gray-100 dark:hover:bg-gray-800">
                         <input type="radio" name="type" class="hidden" value="{{ $genre->id }}">
                         <span class="ml-4 xl:py-1 ">{{ $genre->genreName }}</span>
                     </a>
@@ -26,15 +26,15 @@
         </div>
 
         <!-- Template for categories -->
-        <div class="flex flex-col py-4 xl:py-8 bg-white dark:bg-gray-900 mt-4">
-            <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">Categories</h2>
+        <div class="flex flex-col py-4 xl:py-8  bg-gray-900 ">
+            <h2 class="text-lg font-semibold text-gray-200 mb-2">Categories</h2>
             <div>
-                <a href="#" class="inline-flex items-center px-2.5 py-0.5 mr-2 text-xs text-gray-700 bg-gray-200 rounded hover:bg-blue-600 dark:bg-gray-700 dark:text-gray-400 hover:text-gray-100 dark:hover:bg-gray-800">
+                <a href="#" class="inline-flex items-center px-2.5 py-0.5 mr-2 text-xs  bg-gray-700 rounded hover:bg-blue-600  text-gray-400  hover:text-gray-100 dark:hover:bg-gray-800">
                     <input type="radio" name="category" class="hidden" value="" checked>
                     <span class="ml-2">All Categories</span>
                 </a>
                 @foreach ($categories as $category)
-                    <a href="#" class="inline-flex items-center px-2.5 py-0.5 xl:m-1 mr-2 text-xs text-gray-700 bg-gray-200 rounded hover:bg-blue-600 dark:bg-gray-700 dark:text-gray-400 hover:text-gray-100 dark:hover:bg-gray-800">
+                    <a href="#" class="inline-flex items-center px-2.5 py-0.5 mr-2 xl:m-1 text-xs   rounded hover:bg-blue-600 bg-gray-700 text-gray-400 hover:text-gray-100 dark:hover:bg-gray-800">
                         <input type="radio" name="category" class="hidden" value="{{ $category->id }}">
                         <span class="ml-2 xl:py-1">{{ $category->categoryName }}</span>
                     </a>
@@ -147,7 +147,7 @@
             />
           </svg>
 
-          <p class="text-xs">14 <span class="max-md:hidden">comments</span></p>
+          <p class="text-xs">{{count($post->comments)}} <span class="max-md:hidden">comments</span></p>
         </div>
 </div>
 
@@ -232,7 +232,7 @@
             />
           </svg>
 
-          <p class="text-xs">14 <span class="max-md:hidden">comments</span></p>
+          <p class="text-xs">{{count($post->comments)}} <span class="max-md:hidden">comments</span></p>
         </div>
 </div>
 

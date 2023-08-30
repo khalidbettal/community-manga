@@ -69,9 +69,11 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
         @auth
       @include('partials.mobile-profile')
       @else
-      <button type="button"
-    class="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium sm:hidden
-    rounded-lg text-sm px-6 py-2 text-center  md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"><a href="{{ route('login') }}">Sing In</a></button>
+      <a href="{{ route('login') }}" class="sm:hidden">
+        <button type="button"
+    class="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium
+    rounded-lg text-sm px-2 md:px-6 py-2 text-center mr-3 md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700
+     dark:focus:ring-emerald-800">Sing In </button></a>
       @endauth
       </ul>
     </div>
@@ -91,9 +93,12 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
     @include('partials.laptop-profile')
 
     @else
-    <button type="button"
-    class="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium max-sm:hidden
-    rounded-lg text-sm px-2 md:px-6 py-2 text-center mr-3 md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"><a href="{{ route('login') }}">Sing In</a></button>
+
+    <a href="{{ route('login') }}" class="max-sm:hidden">
+        <button type="button"
+    class="text-white bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium
+    rounded-lg text-sm px-2 md:px-6 py-2 text-center mr-3 md:mr-0 dark:bg-emerald-600 dark:hover:bg-emerald-700
+     dark:focus:ring-emerald-800">Sing In </button></a>
     @endauth
 
 

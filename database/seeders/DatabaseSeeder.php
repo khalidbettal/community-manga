@@ -25,7 +25,6 @@ class DatabaseSeeder extends Seeder
             PostTagSeeder::class,
             PostGenreSeeder::class,
             CommentSeeder::class,
-            ReplySeeder::class,
 
 
         ]);

@@ -29,6 +29,7 @@ class CommentResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('user_id')
                     ->required(),
+                Forms\Components\TextInput::make('parent_id'),
                 Forms\Components\TextInput::make('comment')
                     ->required()
                     ->maxLength(255),

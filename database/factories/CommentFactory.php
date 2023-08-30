@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Comment;
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,9 +20,20 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => fake()->numberBetween(1, 10),
-            'post_id' => fake()->numberBetween(1, 10),
-            'comment' => fake()->sentence(10),
+            'user_id' => fake()->numberBetween(1, 11),
+            'post_id' => fake()->numberBetween(1, 30),
+            'parent_id' => null, // To create top-level comments
+            'comment' => $this->faker->paragraph,
+            // Define other comment-related fields here
         ];
     }
+
+        public function configure()
+        {
+            return $this->state(function (array $attributes) {
+                return [
+                    'parent_id' => Comment::inRandomOrder()->first()->id ?? null,
+                ];
+            });
+        }
 }

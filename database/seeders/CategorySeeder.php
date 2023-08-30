@@ -12,6 +12,22 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\Category::factory()->count(10)->create();
+        \App\Models\Category::factory()->create([
+            'categoryName' => 'manga',
+            'slug' => 'manga',
+        ]);
+        \App\Models\Category::factory()->create([
+            'categoryName' => 'manhwa',
+            'slug' => 'manhwa',
+        ]);
+        \App\Models\Category::factory()->create([
+            'categoryName' => 'manhua',
+            'slug' => 'manhua',
+        ]);
+        \App\Models\Category::factory()->create([
+            'categoryName' => 'light novel',
+            'slug' => 'light-novel',
+        ]);
+        
     }
 }

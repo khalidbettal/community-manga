@@ -43,7 +43,7 @@ class PostResource extends Resource
                         )
                         ->required()
                         ->label('Category'),
-                        Forms\Components\Select::make('genres')
+                        Forms\Components\BelongsToManyMultiSelect::make('genres')
                         ->multiple()
                         ->relationship('genres', 'genreName'),
 
@@ -83,7 +83,7 @@ class PostResource extends Resource
                 // Tables\Columns\TextColumn::make('description')
                 // ->limit(50),
 
-                
+
 
             ])
             ->filters([

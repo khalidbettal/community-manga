@@ -18,10 +18,10 @@ class PostFactory extends Factory
     {
         return [
             'user_id' => fake()->numberBetween(1, 10),
-            'category_id' => fake()->numberBetween(1, 10),
+            'category_id' => fake()->numberBetween(1, 4),
             'title' => fake()->sentence(5),
             'description' => fake()->sentence(20),
-            'image' => fake()->image('public/storage/posts', 640, 480, null, false),
+            'image' => fake()->image( 'public/storage/posts', 640, 480, null, false),
             'slug' => fake()->slug(),
         ];
     }
