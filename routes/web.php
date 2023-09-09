@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Livewire\Add;
 use App\Http\Livewire\Comments;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Home;
@@ -19,9 +20,14 @@ use App\Http\Livewire\SinglePost;
 |
 */
 Route::get('/',Home::class)->name('home');
+Route::get('/add', Add::class)->name('add');
+
 Route::get('/posts', PostList::class)->name('posts');
 Route::get('/single-post/{slug}', SinglePost::class)->name('post.single');
 Route::get('/dashboard', Dashboard::class)->middleware(['auth', 'verified'])->name('dashboard');
+
+
+
 
 
 
@@ -30,6 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
 
 // useless routes

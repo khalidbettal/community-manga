@@ -38,7 +38,7 @@ x-data="{ openMenu: false, toggleMenu() { this.openMenu = ! this.openMenu }
         <li class="text-lg md:text-base lg:text-lg font-medium group ">
 
 
-          <a href="/" class="font-bold md:dark:text-white hover:text-red-600">Home
+          <a href="{{ route('home') }}" class="font-bold md:dark:text-white hover:text-red-600">Home
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
