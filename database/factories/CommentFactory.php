@@ -20,20 +20,24 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => fake()->numberBetween(1, 11),
+            'user_id' => fake()->numberBetween(1, 10),
             'post_id' => fake()->numberBetween(1, 30),
-            'parent_id' => null, // To create top-level comments
-            'comment' => $this->faker->paragraph,
-            // Define other comment-related fields here
+            'parent_id' => null,
+            'comment' => $this->faker->paragraph(),
         ];
     }
 
-        public function configure()
-        {
-            return $this->state(function (array $attributes) {
-                return [
-                    'parent_id' => Comment::inRandomOrder()->first()->id ?? null,
-                ];
-            });
-        }
+    /**
+     * Configure the model factory.
+     *
+     * @return $this
+     */
+    public function configure(): CommentFactory
+    {
+        return $this->state(function (array $attributes): array {
+            return [
+                'parent_id' => Comment::query()->inRandomOrder()->first()->id ?? null
+            ];
+        });
+    }
 }
